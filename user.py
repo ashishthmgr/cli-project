@@ -197,5 +197,11 @@ def main():
         exit()
 main()
 
-
- 
+#install git in device
+# create a new repo in github
+#git config user.name "Ashish Thapa"
+#git config user.email "ashishthmgr@gmail.com"
+# git init
+# git add
+# git commit -m "commit message"
+#git push origin
