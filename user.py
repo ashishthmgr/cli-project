@@ -99,7 +99,7 @@ def select_users(con, no_of_users= 0):
 
 def select_user_by_id(con, user_id):
     cur= con.cursor()
-    users = cur.execute("SELECT * FROM users where id = ?;", (user_id))
+    users = cur.execute("SELECT * FROM users where id = ?;", (user_id,))
     for user in users:
         print (user)  
 
@@ -113,7 +113,7 @@ def delete_users(con):
 
 def delete_user_by_id(con, user_id):
     cur = con.cursor()
-    cur.execute("DELETE FROM users where id = ?;", (user_id))
+    cur.execute("DELETE FROM users where id = ?;", (user_id,))
     con.commit()
     print(f"user with id [{user_id}] was successfully deleted.")
 
@@ -198,10 +198,11 @@ def main():
 main()
 
 #install git in device
-# create a new repo in github
-#git config user.name "Ashish Thapa"
-#git config user.email "ashishthmgr@gmail.com"
-# git init
-# git add
-# git commit -m "commit message"
+#create a new repo in github
+#git config --global user.name "Ashish Thapa"
+#git config --global user.email "ashishthmgr@gmail.com"
+#git init
+
+#git add . 
+#git commit -m "commit message"
 #git push origin
